@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <link rel="icon" href="chile_flag.png">
+        <link href="about.html" rel="information section">
+        <link href="gallery.html" rel="image section">
+        <link href="videos.html" rel="videos of interest">
+        <link href="index.html" rfel="home page">
+        <title>Chile</title>
+        <script>
+            setInterval(change, 2500);
+            var docy = ["#ff0000", "#0000ff", "#ffffff"]
+            let cont = 0;
+            function change()
+            {
+                var moth = document.getElementById("back");
+                moth.style.backgroundColor = docy[cont];
+                var tup = document.getElementById("text");
+                var duct = 2 - cont;
+                if (duct == 1)
+                {
+                    tup.style.color = docy[0];
+                    cont += 1;
+                    if (cont == 3)
+                    {
+                        cont -= 3;
+                    }
+                }
+                else if (duct == 0)
+                {
+                    tup.style.color = docy[1];
+                    cont += 1;
+                    if (cont == 3)
+                    {
+                        cont -= 3;
+                    }
+                }
+                else
+                {
+                    tup.style.color = docy[duct];
+                    cont += 1;
+                    if (cont == 3)
+                    {
+                        cont -= 3;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body id="back">
+        <header>
+            <div id="text">
+            Links
+            <div/>
+            <p></p>
+            <div>
+                <ul class="nav nav-pills nav-justified">
+                    <li class="nav-item">
+                    <a class="nav-link" href="about.html" id ="tabs">About</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="gallery.html" id ="tabs">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="videos.html" id ="tabs">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="index.html" id ="tabs">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <p>
+            <h2 class="txt">Some links so you can learn more about this country.</h2>
+        </p>
+        <footer class="txt">
+            <div class="list-group" id="space">
+                <div style="border-style: solid;">
+                    <a href="https://www.chile.travel/en/" class="list-group-item list-group-item-action" target="_blank" id="corte">Tourims in chile.</a>
+                    <a href="https://www.cia.gov/the-world-factbook/countries/chile/" class="list-group-item list-group-item-action" target="_blank" id="corte">Information about Chile.</a>
+                    <a href="https://www.visitchile.com/en/pictures.htm" class="list-group-item list-group-item-action" target="_blank" id="corte">More pictures from Chile.</a>
+                </div>
+            <p>
+                <h6>Search embassy in your country.</h6>
+                <form action="https://www.google.com/search" method="get" target="_blank">
+                    <input autocomplete="off" name="q" type="text" value="Chile Embassy in ">
+                    <input type="submit" value="Search">
+                </form>
+            </p>
+            </div>
+        </footer>
+    </body>
+</html>
